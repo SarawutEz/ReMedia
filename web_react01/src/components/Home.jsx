@@ -1,15 +1,17 @@
 import React from 'react'
-import Nav from './nav'
+import Example from './nav'
 import './style.css'
 
 
 function Home() {
   return (
     <>
-      <Nav />
+      <title>ReMedia</title>
+
+      <Example />
 
       <div className='aaa'>
-        <h1>adfaaaaaaaaaa</h1>
+        <h1>1</h1>
       </div>
 
     </>

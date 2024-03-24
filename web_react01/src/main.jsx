@@ -1,13 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
-import './App.css'
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './components/Home.jsx'
-import About from './components/About.jsx'
-import Blog from './components/Blog.jsx'
-import Contact from './components/Contact.jsx'
+import Movies from './components/Movies.jsx'
+import Animations from './components/Animations.jsx'
+import Mangas from './components/Mangas.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,18 +14,18 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "about",
-    element: <About />
+    path: "Movies",
+    element: <Movies />
   },
 
   {
-    path: "blog",
-    element: <Blog />
+    path: "Animations",
+    element: <Animations />
   },
 
   {
-    path: "contact",
-    element: <Contact />
+    path: "Mangas",
+    element: <Mangas />
   }
 
 ])
