@@ -13,7 +13,7 @@ export default function Nav() {
                 <li className="btn btn-ghost text-lg"><Link to="/">Home</Link></li>
                 <li className="btn btn-ghost text-lg"><Link to="/Movies">Movies</Link></li>
                 <li className="btn btn-ghost text-lg"><Link to="/Animations">Animations</Link></li>
-                <li className="btn btn-ghost text-lg"><Link to="/Mangas">Mangas</Link></li>
+                <li className="btn btn-ghost text-lg"><Link to="/Game">Game</Link></li>
             </ul>
 
             <div className="flex">
@@ -27,7 +27,7 @@ export default function Nav() {
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/Movies">Movies</Link></li>
                                 <li><Link to="/Animations">Animations</Link></li>
-                                <li><Link to="/Mangas">Mangas</Link></li>
+                                <li><Link to="/Game">Game</Link></li>
                             </ul>
                         </details>
                     </li>

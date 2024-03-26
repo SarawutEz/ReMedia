@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './components/Home.jsx'
 import Movies from './components/Movies.jsx'
 import Animations from './components/Animations.jsx'
-import Mangas from './components/Mangas.jsx'
+import Game from './components/Game.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,8 +24,8 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "Mangas",
-    element: <Mangas />
+    path: "Game",
+    element: <Game />
   }
 
 ])

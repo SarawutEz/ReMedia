@@ -1,10 +1,10 @@
 import React from 'react'
 import Nav from './nav'
 
-export default function Mangas() {
+export default function Game() {
   return (
     <>
-      <title>Mangas</title>
+      <title>Game</title>
 
       <Nav />
 
