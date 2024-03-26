@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require('tailwindcss-animated')],
+
 
   daisyui: {
     themes: true, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
