@@ -8,6 +8,7 @@ import Animations from './components/Animations.jsx'
 import Game from './components/Game.jsx'
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,8 @@ const router = createBrowserRouter([
     path: "Game",
     element: <Game />
   },
+
+  
 
 ])
 

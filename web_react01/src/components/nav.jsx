@@ -3,31 +3,31 @@ import { Link } from "react-router-dom"
 
 export default function Nav() {
     return (
-        <div className="navbar  bg-black rounded-2xl fixed top-0 left-0 right-0 z-50">
+        <div className="navbar bg-black rounded-2xl fixed top-0 left-0 right-0 z-50">
             <div className="flex-1">
                 <a className="btn btn-ghost text-2xl font-extrabold tracking-widest">ReMedia</a>
             </div>
 
 
             <ul className="p-1 rounded-t-none max-sm:hidden">
-                <li className="btn btn-ghost text-lg"><Link to="/">Home</Link></li>
-                <li className="btn btn-ghost text-lg"><Link to="/Movies">Movies</Link></li>
-                <li className="btn btn-ghost text-lg"><Link to="/Animations">Animations</Link></li>
-                <li className="btn btn-ghost text-lg"><Link to="/Game">Game</Link></li>
+                <li className="btn btn-ghost text-lg hover:underline"><Link to="/">Home</Link></li>
+                <li className="btn btn-ghost text-lg hover:underline"><Link to="/Movies">Movies</Link></li>
+                <li className="btn btn-ghost text-lg hover:underline"><Link to="/Animations">Animations</Link></li>
+                <li className="btn btn-ghost text-lg hover:underline"><Link to="/Game">Game</Link></li>
             </ul>
 
             <div className="flex">
                 <ul className="menu menu-horizontal px-10 text-lg sm:hidden">
                     <li>
                         <details>
-                            <summary className="text-lg">
+                            <summary className="text-lg ">
                                 Menu
                             </summary>
                             <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black">
-                                <li><Link to="/">Home</Link></li>
-                                <li><Link to="/Movies">Movies</Link></li>
-                                <li><Link to="/Animations">Animations</Link></li>
-                                <li><Link to="/Game">Game</Link></li>
+                                <li className="hover:underline"><Link to="/">Home</Link></li>
+                                <li className="hover:underline"><Link to="/Movies">Movies</Link></li>
+                                <li className="hover:underline"><Link to="/Animations">Animations</Link></li>
+                                <li className="hover:underline"><Link to="/Game">Game</Link></li>
                             </ul>
                         </details>
                     </li>
