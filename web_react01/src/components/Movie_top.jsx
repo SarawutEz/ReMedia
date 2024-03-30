@@ -1,5 +1,3 @@
-import Nav from './nav'
-import Footer from './footer'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -7,13 +5,16 @@ import { Link } from "react-router-dom"
 import { useParams } from 'react-router-dom'
 
 
+//components
+import Nav from './nav'
+import Footer from './footer'
 
-export default function Movies() {
+function Movie_top() {
 
   const [data, setDate] = useState([])
 
   const fetchAPI = async () => {
-    const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=1`, {
+    const response = await axios.get(`https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`, {
       headers: {
         'accept': 'application/json',
         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNDIzMjllY2M4ODk5YzQ4OWVmNTM1MTIxMWNhZThlNSIsInN1YiI6IjY2MDM3N2U4ZGJmMTQ0MDE3ZDAzMTczNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.hR1xJERwjQjV_NoY5SNxTL0ZrKJ3_e1ceEEQLcohr5Q'
@@ -34,17 +35,23 @@ export default function Movies() {
       <Nav />
 
       <p className='mt-28 ml-16 text-4xl font-bold text-start underline decoration-solid animate-fade-right'>
-        Popular Movies</p>
+        Top Movies</p>
 
       <div className='flex flex-wrap justify-center'>
         {data.map((val) => (
           <div key={val.id}>
             <div className='mt-16 mx-16 w-72 skeleton animate-fade-up'>
 
-              <div className="absolute z-10 dropdown dropdown-bottom animate-fade-right">
+              <div className="absolute  z-10 dropdown dropdown-bottom animate-fade-right">
                 <div tabIndex={0} role="button" className="btn m-1"><img src="/img/book.png" /></div>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-80">
                   <p className='text-lg z-15'>{val.overview}</p>
+                  <details className="dropdown">
+                    <summary className="m-1 btn btn-active btn-link bg-transparent border-none animate-spin"><img src="/img/time.png" /></summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                      <p className='text-lg z-15'>{val.release_date}</p>
+                    </ul>
+                  </details>
                 </ul>
               </div>
 
@@ -60,18 +67,14 @@ export default function Movies() {
 
                 </div>
               </div>
-
             </div>
-
-
-
-
           </div>
         ))}
-
       </div>
 
       <Footer />
     </>
   )
 }
+
+export default Movie_top

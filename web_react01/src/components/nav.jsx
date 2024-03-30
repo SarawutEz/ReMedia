@@ -11,9 +11,60 @@ export default function Nav() {
 
             <ul className="p-1 rounded-t-none max-sm:hidden">
                 <li className="btn btn-ghost text-lg hover:underline"><Link to="/">Home</Link></li>
-                <li className="btn btn-ghost text-lg hover:underline"><Link to="/Movies">Movies</Link></li>
-                <li className="btn btn-ghost text-lg hover:underline"><Link to="/Animations">Animations</Link></li>
-                <li className="btn btn-ghost text-lg hover:underline"><Link to="/Game">Game</Link></li>
+
+                <div className="flex">
+                    <ul className="menu menu-horizontal text-lg">
+                        <li>
+                            <details>
+                                <summary className="text-lg ">
+                                    Movies
+                                </summary>
+                                <ul className="p-1 rounded-t-none text-base bg-black w-36">
+                                    <li className="hover:underline"><Link to="/Movies_top">Top</Link></li>
+                                    <li className="hover:underline"><Link to="/Movies_Popular">Popular</Link></li>
+                                    <li className="hover:underline"><Link to="/Movies_Trending">Trending</Link></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className="flex">
+                    <ul className="menu menu-horizontal text-lg">
+                        <li>
+                            <details>
+                                <summary className="text-lg ">
+                                    TV Series
+                                </summary>
+                                <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black">
+                                    <li className="hover:underline"><Link to="/TV_Top">Top</Link></li>
+                                    <li className="hover:underline"><Link to="/TV_Popular">Popular</Link></li>
+                                    <li className="hover:underline"><Link to="/TV_Trending">Trending</Link></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className="flex">
+                    <ul className="menu menu-horizontal text-lg">
+                        <li>
+                            <details>
+                                <summary className="text-lg ">
+                                    Game
+                                </summary>
+                                <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black">
+                                    <li className="hover:underline"><Link to="/">Home</Link></li>
+                                    <li className="hover:underline"><Link to="/Movies_Popular">Movies</Link></li>
+                                    <li className="hover:underline"><Link to="/Animations">Animations</Link></li>
+                                    <li className="hover:underline"><Link to="/Game">Game</Link></li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+
+
             </ul>
 
             <div className="flex">
@@ -25,16 +76,41 @@ export default function Nav() {
                             </summary>
                             <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black">
                                 <li className="hover:underline"><Link to="/">Home</Link></li>
-                                <li className="hover:underline"><Link to="/Movies">Movies</Link></li>
-                                <li className="hover:underline"><Link to="/Animations">Animations</Link></li>
-                                <li className="hover:underline"><Link to="/Game">Game</Link></li>
+
+                                <li>
+                                    <details>
+                                        <summary className="text-lg ">
+                                            Movies
+                                        </summary>
+                                        <ul>
+                                            <li className="hover:underline"><Link to="/Movies_Trending">Trending</Link></li>
+                                            <li className="hover:underline"><Link to="/Movies_Popular">Popular</Link></li>
+                                            <li className="hover:underline"><Link to="/Movies_top">Top</Link></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+                                <li>
+                                    <details>
+                                        <summary className="text-lg ">
+                                            TV
+                                        </summary>
+                                        <ul>
+                                            <li className="hover:underline"><Link to="/TV_Trending">Trending</Link></li>
+                                            <li className="hover:underline"><Link to="/TV_Popular">Popular</Link></li>
+                                            <li className="hover:underline"><Link to="/TV_Top">top</Link></li>
+                                        </ul>
+                                    </details>
+                                </li>
+
+
                             </ul>
                         </details>
                     </li>
                 </ul>
             </div>
 
-            <label className="swap swap-rotate">
+            <label className="swap swap-rotate animate-pulse animate-infinite animate-delay-[5000ms]">
 
                 {/* this hidden checkbox controls the state */}
                 <input type="checkbox" className="theme-controller" value="synthwave" />
