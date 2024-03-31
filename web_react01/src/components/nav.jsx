@@ -49,7 +49,7 @@ export default function Nav() {
                 <div className="flex">
                     <ul className="menu menu-horizontal text-lg">
                         <li>
-                            <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black">
+                            <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black text-lg">
                                 <li className="hover:underline"><Link to="/Search">Search <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg> </Link></li>
                             </ul>
                         </li>
