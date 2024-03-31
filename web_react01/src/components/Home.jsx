@@ -20,7 +20,7 @@ function Home() {
         <div className='flex-row mr-12'>
           <p className='text-6xl font-extrabold underline'>Movie</p>
           <p className='mt-6 text-lg '>Movies is a form of visual art that uses images to tell a story or convey an idea Can be divided into many types.</p>
-          <button className="btn btn-outline mt-8"><Link to="/Movies">Movies</Link></button>
+          <button className="btn btn-outline mt-8"><Link to="/Movies_Trending">Movies</Link></button>
         </div>
         <img className='card size-6/12 skew-y-6 select-none cursor-pointer hover:skew-y-0' src="/img/avengersendgame_lob_mas_dsk_01.jpg" />
       </div>
@@ -31,7 +31,7 @@ function Home() {
         <div className='flex-row ml-12'>
           <p className='text-6xl font-extrabold underline'>Animation</p>
           <p className='mt-6 text-lg'>Animation is the creation of moving images by projecting several still images consecutively at high speed by arranging them together.</p>
-          <button className="btn btn-outline mt-8"><Link to="/Animations">Animations</Link></button>
+          <button className="btn btn-outline mt-8"><Link to="/TV_Trending">Animations</Link></button>
         </div>
       </div>
 

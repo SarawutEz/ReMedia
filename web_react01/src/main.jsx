@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './components/Home.jsx'
 import Movies_Popular from './components/Movies_Popular.jsx'
 import Animations from './components/Animations.jsx'
-import Game from './components/Game.jsx'
+import Search from './components/Search.jsx'
 import Movie_top from './components/Movie_top.jsx';
 import TV_Popular from './components/TV_Popular .jsx';
 import TV_top from './components/TV_top.jsx';
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "Game",
-    element: <Game />
+    path: "Search",
+    element: <Search />
   },
 
   {

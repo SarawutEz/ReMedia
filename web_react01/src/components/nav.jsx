@@ -5,7 +5,7 @@ export default function Nav() {
     return (
         <div className="navbar bg-black rounded-2xl fixed top-0 left-0 right-0 z-50">
             <div className="flex-1">
-                <a className="btn btn-ghost text-2xl font-extrabold tracking-widest">ReMedia</a>
+                <Link to="/"> <li className="btn btn-ghost text-2xl font-extrabold tracking-widest">ReMedia</li></Link>
             </div>
 
 
@@ -49,17 +49,9 @@ export default function Nav() {
                 <div className="flex">
                     <ul className="menu menu-horizontal text-lg">
                         <li>
-                            <details>
-                                <summary className="text-lg ">
-                                    Game
-                                </summary>
-                                <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black">
-                                    <li className="hover:underline"><Link to="/">Home</Link></li>
-                                    <li className="hover:underline"><Link to="/Movies_Popular">Movies</Link></li>
-                                    <li className="hover:underline"><Link to="/Animations">Animations</Link></li>
-                                    <li className="hover:underline"><Link to="/Game">Game</Link></li>
-                                </ul>
-                            </details>
+                            <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black">
+                                <li className="hover:underline"><Link to="/Search">Search <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg> </Link></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -74,7 +66,7 @@ export default function Nav() {
                             <summary className="text-lg ">
                                 Menu
                             </summary>
-                            <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black">
+                            <ul className="p-2 rounded-t-none text-base bg-black">
                                 <li className="hover:underline"><Link to="/">Home</Link></li>
 
                                 <li>
@@ -83,9 +75,9 @@ export default function Nav() {
                                             Movies
                                         </summary>
                                         <ul>
-                                            <li className="hover:underline"><Link to="/Movies_Trending">Trending</Link></li>
-                                            <li className="hover:underline"><Link to="/Movies_Popular">Popular</Link></li>
                                             <li className="hover:underline"><Link to="/Movies_top">Top</Link></li>
+                                            <li className="hover:underline"><Link to="/Movies_Popular">Popular</Link></li>
+                                            <li className="hover:underline"><Link to="/Movies_Trending">Trending</Link></li>
                                         </ul>
                                     </details>
                                 </li>
@@ -96,13 +88,14 @@ export default function Nav() {
                                             TV
                                         </summary>
                                         <ul>
-                                            <li className="hover:underline"><Link to="/TV_Trending">Trending</Link></li>
+                                            <li className="hover:underline"><Link to="/TV_Top">Top</Link></li>
                                             <li className="hover:underline"><Link to="/TV_Popular">Popular</Link></li>
-                                            <li className="hover:underline"><Link to="/TV_Top">top</Link></li>
+                                            <li className="hover:underline"><Link to="/TV_Trending">Trending</Link></li>
                                         </ul>
                                     </details>
                                 </li>
 
+                                <li className="hover:underline"><Link to="/Search">Search <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg> </Link></li>
 
                             </ul>
                         </details>
