@@ -57,8 +57,8 @@ function TV_Trending() {
 
                 <div className='flex flex-wrap justify-center'>
                     {data.map((val) => (
-                        <div key={val.id}>
-                            <div className='mt-16 mx-16 w-72 skeleton animate-fade-up'>
+                        <div className='mt-20' key={val.id}>
+                            <div className='mx-16 w-72 min-h-full skeleton hover:animate-fade-up'>
 
                                 <div className="absolute  z-10 dropdown dropdown-bottom animate-fade-right">
                                     <div tabIndex={0} role="button" className="btn m-1"><img src="/img/book.png" /></div>
