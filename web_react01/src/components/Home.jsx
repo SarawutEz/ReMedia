@@ -45,9 +45,6 @@ function Home() {
         <img className='card size-6/12 skew-y-6 select-none cursor-pointer hover:skew-y-0' src="/img/spider_man.webp" />
       </div>
 
-
-
-
       {/*Footer*/}
       <Footer />
     </>

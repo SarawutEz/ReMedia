@@ -59,10 +59,10 @@ function Movie_Trending() {
                     {data.map((val) => (
                         <div className='mt-20' key={val.id}>
 
-                            <div className='mx-16 w-72 min-h-full skeleton hover:animate-fade-up'>
+                            <div className='mx-16 w-72 min-h-full skeleton '>
 
                                 <div className="absolute  z-10 dropdown dropdown-bottom animate-fade-right">
-                                    <div tabIndex={0} role="button" className="btn m-1"><img src="/img/book.png" /></div>
+                                    <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/book.png" /></div>
                                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-80">
                                         <p className='text-lg z-15'>{val.overview}</p>
                                         <details className="dropdown">
@@ -74,6 +74,13 @@ function Movie_Trending() {
 
                                     </ul>
                                 </div>
+
+                                <div className="absolute dropdown dropdown-end ml-56 z-10">
+                  <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/add-image.png" /></div>
+                  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.backdrop_path}`} />
+                  </ul>
+                </div>
 
                                 <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
 
