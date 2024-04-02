@@ -19,10 +19,11 @@ export default function Nav() {
                                 <summary className="text-lg ">
                                     Movies
                                 </summary>
-                                <ul className="p-1 rounded-t-none text-base bg-black w-36">
+                                <ul className="p-1 rounded-t-none text-base bg-black">
                                     <li className="hover:underline"><Link to="/Movies_top">Top</Link></li>
                                     <li className="hover:underline"><Link to="/Movies_Popular">Popular</Link></li>
                                     <li className="hover:underline"><Link to="/Movies_Trending">Trending</Link></li>
+                                    <li className="hover:underline"><Link to="/Discussions_M">Discussions</Link></li>
                                 </ul>
                             </details>
                         </li>
@@ -40,6 +41,7 @@ export default function Nav() {
                                     <li className="hover:underline"><Link to="/TV_Top">Top</Link></li>
                                     <li className="hover:underline"><Link to="/TV_Popular">Popular</Link></li>
                                     <li className="hover:underline"><Link to="/TV_Trending">Trending</Link></li>
+                                    <li className="hover:underline"><Link to="/Discussions_T">Discussions</Link></li>
                                 </ul>
                             </details>
                         </li>
@@ -78,6 +80,7 @@ export default function Nav() {
                                             <li className="hover:underline"><Link to="/Movies_top">Top</Link></li>
                                             <li className="hover:underline"><Link to="/Movies_Popular">Popular</Link></li>
                                             <li className="hover:underline"><Link to="/Movies_Trending">Trending</Link></li>
+                                            <li className="hover:underline"><Link to="/Discussions_M">Discussions</Link></li>
                                         </ul>
                                     </details>
                                 </li>
@@ -91,6 +94,7 @@ export default function Nav() {
                                             <li className="hover:underline"><Link to="/TV_Top">Top</Link></li>
                                             <li className="hover:underline"><Link to="/TV_Popular">Popular</Link></li>
                                             <li className="hover:underline"><Link to="/TV_Trending">Trending</Link></li>
+                                            <li className="hover:underline"><Link to="/Discussions_T">Discussions</Link></li>
                                         </ul>
                                     </details>
                                 </li>

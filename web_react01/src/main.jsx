@@ -11,6 +11,8 @@ import TV_Popular from './components/TV_Popular .jsx';
 import TV_top from './components/TV_top.jsx';
 import TV_Trending from './components/TV_Trending.jsx';
 import Movie_Trending from './components/Movie_Trending.jsx';
+import Discussions_M from './components/Discussions_M.jsx';
+import Discussions_T from './components/Discussions_T.jsx';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,16 @@ const router = createBrowserRouter([
   {
     path: "TV_Trending",
     element: <TV_Trending />
+  },
+
+  {
+    path: "Discussions_M",
+    element: <Discussions_M />
+  },
+
+  {
+    path: "Discussions_T",
+    element: <Discussions_T />
   },
 
   {
