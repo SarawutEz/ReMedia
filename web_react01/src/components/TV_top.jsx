@@ -61,7 +61,7 @@ function TV_top() {
                                 <div className="absolute  z-20 dropdown dropdown-bottom animate-fade-right">
                                     <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/book.png" /></div>
                                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-96">
-                                        <p className='text-lg'>{val.overview}</p>
+                                        <p className='text-lg mr-4'>{val.overview}</p>
                                         <details className="dropdown">
                                             <summary className="m-1 btn btn-active btn-link bg-transparent border-none animate-spin"><img src="/img/time.png" /></summary>
                                             <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">

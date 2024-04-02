@@ -9,7 +9,7 @@ export default function Nav() {
             </div>
 
 
-            <ul className="p-1 rounded-t-none max-sm:hidden">
+            <ul className="p-1 rounded-t-none max-md:hidden">
                 <li className="btn btn-ghost text-lg hover:underline"><Link to="/">Home</Link></li>
 
                 <div className="flex">
@@ -60,7 +60,7 @@ export default function Nav() {
             </ul>
 
             <div className="flex">
-                <ul className="menu menu-horizontal px-10 text-lg sm:hidden">
+                <ul className="menu menu-horizontal px-10 text-lg md:hidden">
                     <li>
                         <details>
                             <summary className="text-lg ">
