@@ -71,12 +71,12 @@ function Movie_top() {
                 <div className="absolute dropdown dropdown-end ml-36 z-10">
                   <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/add-image.png" /></div>
                   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.backdrop_path}`} />
+                    <img className='card size-11/12 animate-fade-left' src={`https://image.tmdb.org/t/p/w500${val.backdrop_path}`} />
                   </ul>
                 </div>
 
 
-                <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
+                <img className='card size-11/12 animate-fade-left' src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
 
 
                 <div className="stats shadow pt-1 bg-transparent">
