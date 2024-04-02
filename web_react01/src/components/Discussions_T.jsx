@@ -7,13 +7,13 @@ import Giscus from '@giscus/react';
 function Discussions_T() {
   return (
     <>
-     <title>Discussions TV Show</title>
-   <Nav />
+      <title>Discussions TV Show</title>
+      <Nav />
 
-   <div className='ml-8 mr-8 mt-36'>
+      <div className='ml-8 mr-8 mt-36'>
         <Giscus
           id="comments"
-          repo="SarawutEz/react01"
+          repo="SarawutEz/ReMedia"
           repoId="R_kgDOLkVEiw"
           category="General"
           categoryId="DIC_kwDOLkVEi84CeZGQ"
@@ -27,8 +27,8 @@ function Discussions_T() {
         />
       </div>
 
-   <Footer />
-   </>
+      <Footer />
+    </>
   )
 }
 

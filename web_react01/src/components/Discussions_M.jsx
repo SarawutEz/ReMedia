@@ -13,7 +13,7 @@ function Discussions_M() {
       <div className='ml-8 mr-8 mt-36'>
         <Giscus
           id="comments"
-          repo="SarawutEz/react01"
+          repo="SarawutEz/ReMedia"
           repoId="R_kgDOLkVEiw"
           category="General"
           categoryId="DIC_kwDOLkVEi84CeZGQ"
