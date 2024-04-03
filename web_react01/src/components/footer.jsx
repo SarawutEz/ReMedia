@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export default function Footer() {
     return (
-        <footer className="footer p-10 text-base-content mt-96 bg-black">
+        <footer className="footer p-10 text-base-content mt-96 bg-black bottom-0">
             <nav>
                 <h6 className="footer-title">Services</h6>
                 <a className="link link-hover">Branding</a>

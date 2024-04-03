@@ -16,7 +16,7 @@ function Home() {
 
 
       {/*Content 1*/}
-      <div className='flex w-11/12 mx-auto mt-52 animate-fade-right animate-ease-in-out max-md:flex-col mt-20'>
+      <div className='flex w-11/12 mx-auto mt-36 animate-fade-right animate-ease-in-out max-md:flex-col mt-20'>
         <div className='mr-12 max-md:mr-0'>
           <p className='text-6xl font-extrabold underline max-md:text-5xl'>Movie</p>
           <p className='mt-6 text-lg '>Movies is a form of visual art that uses images to tell a story or convey an idea Can be divided into many types.</p>

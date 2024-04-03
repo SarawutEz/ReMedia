@@ -48,7 +48,7 @@ export default function Movies_Popular() {
       <title>Popular Movies</title>
       <Nav />
 
-      <p className='mt-28 mb-20 ml-16 text-4xl font-bold text-start underline decoration-solid animate-fade-right'>
+      <p className='mt-28 mb-20 text-4xl font-bold text-center underline decoration-solid animate-fade-right'>
         Popular Movies</p>
 
       {loading ? <div className='container mx-auto flex justify-center'><span className="loading loading-ring loading-lg"></span></div> : <div>
@@ -56,9 +56,9 @@ export default function Movies_Popular() {
         <div className='flex flex-wrap justify-center'>
           {data.map((val) => (
             <div className='mb-48' key={val.id}>
-              <div className='mx-16 w-72 min-h-full skeleton '>
+              <div className='min-h-full skeleton mx-2 sm:w-72 sm:mx-6 lg:mx-8 '>
 
-                <div className="z-10 dropdown dropdown-bottom animate-fade-right">
+                <div className="z-20 dropdown dropdown-bottom animate-fade-right">
                   <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/book.png" /></div>
                   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-80">
                     <p className='text-lg z-15 mr-4'>{val.overview}</p>
@@ -71,7 +71,7 @@ export default function Movies_Popular() {
                   </ul>
                 </div>
 
-                <div className="absolute dropdown dropdown-end ml-36 z-10">
+                <div className="absolute dropdown dropdown-center z-10">
                   <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/add-image.png" /></div>
                   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                     <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.backdrop_path}`} />

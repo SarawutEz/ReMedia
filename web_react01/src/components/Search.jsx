@@ -53,7 +53,7 @@ export default function Search() {
       <title>Search</title>
       <Nav />
 
-      <label className="input input-bordered flex items-center gap-2 mt-28 w-6/12 container mx-auto animate-fade-right">
+      <label className="input input-bordered flex items-center mt-28 mx-4 animate-fade-right">
 
         <input type="text" className="grow text-lg" placeholder="Search" value={Search} onChange={(e) => setSearch(e.target.value)} />
 
@@ -65,9 +65,9 @@ export default function Search() {
         <div className='flex flex-wrap justify-center'>
           {data.map((val) => (
             <div className='mt-20' key={val.id}>
-              <div className='mx-16 w-72 min-h-full skeleton '>
+              <div className='min-h-full skeleton mx-2 sm:w-72 sm:mx-6 lg:mx-8 '>
 
-                <div className="z-10 dropdown dropdown-bottom animate-fade-right">
+                <div className="z-20 dropdown dropdown-bottom animate-fade-right">
                   <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/book.png" /></div>
                   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-80">
                     <p className='text-lg z-15 mr-4'>{val.overview}</p>
@@ -81,14 +81,14 @@ export default function Search() {
                   </ul>
                 </div>
 
-                <div className="absolute dropdown dropdown-end ml-36 z-10">
+                <div className="absolute dropdown dropdown-center z-10">
                   <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/add-image.png" /></div>
                   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.backdrop_path}`} />
+                    <img className='card size-11/12 animate-fade-left' src={`https://image.tmdb.org/t/p/w500${val.backdrop_path}`} />
                   </ul>
                 </div>
 
-                <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
+                <img className='card size-11/12 animate-fade-left' src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
 
 
                 <div className="stats shadow pt-1 bg-transparent">

@@ -3,128 +3,72 @@ import { Link } from "react-router-dom"
 
 export default function Nav() {
     return (
-        <div className="navbar bg-black rounded-2xl fixed top-0 left-0 right-0 z-50">
-            <div className="flex-1">
-                <Link to="/"> <li className="text-base-content btn btn-ghost text-2xl font-extrabold tracking-widest">ReMedia</li></Link>
-            </div>
-
-
-            <ul className="p-1 rounded-t-none max-md:hidden">
-                <li className="text-base-content btn btn-ghost text-lg hover:underline"><Link to="/">Home</Link></li>
-
-                <div className="flex">
-                    <ul className="menu menu-horizontal text-lg">
+        <div className="navbar bg-gradient-to-r from-base-100 to-base-300 z-50 fixed top-0">
+            <div className="navbar-start">
+                <div className="dropdown ">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabIndex={0} className="ml-2 sm:ml-6 lg:ml-8 menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-gradient-to-r from-base-100 to-base-300">
+                        <li className="pb-2"><Link to="/">Home</Link></li>
                         <li>
-                            <details>
-                                <summary className="text-base-content text-lg ">
-                                    Movies
-                                </summary>
-                                <ul className="p-1 rounded-t-none text-base bg-black">
-                                    <li className="text-base-content hover:underline"><Link to="/Movies_top">Top</Link></li>
-                                    <li className="text-base-content hover:underline"><Link to="/Movies_Popular">Popular</Link></li>
-                                    <li className="text-base-content hover:underline"><Link to="/Movies_Trending">Trending</Link></li>
-                                    <li className="text-base-content hover:underline"><Link to="/Discussions_M">Discussions</Link></li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="flex">
-                    <ul className="menu menu-horizontal text-lg">
-                        <li>
-                            <details>
-                                <summary className="text-base-content text-lg ">
-                                    TV Series
-                                </summary>
-                                <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black">
-                                    <li className="text-base-content hover:underline"><Link to="/TV_Top">Top</Link></li>
-                                    <li className="text-base-content hover:underline"><Link to="/TV_Popular">Popular</Link></li>
-                                    <li className="text-base-content hover:underline"><Link to="/TV_Trending">Trending</Link></li>
-                                    <li className="text-base-content hover:underline"><Link to="/Discussions_T">Discussions</Link></li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="flex">
-                    <ul className="menu menu-horizontal text-lg">
-                        <li>
-                            <ul className="p-1 bg-base-100 rounded-t-none text-base bg-black text-lg">
-                                <li className="text-base-content hover:underline"><Link to="/Search">Search <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg> </Link></li>
+                            <a>Movie</a>
+                            <ul className="p-4">
+                                <li><Link to="/Movies_top">Top</Link></li>
+                                <li><Link to="/Movies_Popular">Popular</Link></li>
+                                <li><Link to="/Movies_Trending">Trending</Link></li>
+                                <li><Link to="/Discussions_M">Discussions</Link></li>
                             </ul>
                         </li>
+                        <li>
+                            <a>TV Shows</a>
+                            <ul className="p-4">
+                                <li><Link to="/TV_top">Top</Link></li>
+                                <li><Link to="/TV_Popular">Popular</Link></li>
+                                <li><Link to="/TV_Trending">Trending</Link></li>
+                                <li><Link to="/Discussions_T">Discussions</Link></li>
+                            </ul>
+                        </li>
+                        <li><Link to="/Search">Search <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg></Link></li>
                     </ul>
                 </div>
-
-
-            </ul>
-
-            <div className="flex">
-                <ul className="menu menu-horizontal px-10 text-lg md:hidden">
+                <Link to="/" className="btn btn-ghost text-xl">ReMedia</Link>
+            </div>
+            <div className="navbar-center hidden lg:flex ">
+                <ul className="menu menu-horizontal px-1 ">
+                    <li><Link to="/">Home</Link></li>
                     <li>
-                        <details className="max-sm:mr-8">
-                            <summary className="text-base-content text-lg">
-                                Menu
-                            </summary>
-                            <ul className="p-2 rounded-t-none text-base bg-black">
-                                <li className="text-base-content hover:underline"><Link to="/">Home</Link></li>
-
-                                <li>
-                                    <details>
-                                        <summary className="text-base-content text-base-content text-lg">
-                                            Movies
-                                        </summary>
-                                        <ul>
-                                            <li className="text-base-content hover:underline"><Link to="/Movies_top">Top</Link></li>
-                                            <li className="text-base-content hover:underline"><Link to="/Movies_Popular">Popular</Link></li>
-                                            <li className="text-base-content hover:underline"><Link to="/Movies_Trending">Trending</Link></li>
-                                            <li className="text-base-content hover:underline"><Link to="/Discussions_M">Discussions</Link></li>
-                                        </ul>
-                                    </details>
-                                </li>
-
-                                <li>
-                                    <details>
-                                        <summary className="text-base-content text-lg ">
-                                            TV
-                                        </summary>
-                                        <ul>
-                                            <li className="text-base-content hover:underline"><Link to="/TV_Top">Top</Link></li>
-                                            <li className="text-base-content hover:underline"><Link to="/TV_Popular">Popular</Link></li>
-                                            <li className="text-base-content hover:underline"><Link to="/TV_Trending">Trending</Link></li>
-                                            <li className="text-base-content hover:underline"><Link to="/Discussions_T">Discussions</Link></li>
-                                        </ul>
-                                    </details>
-                                </li>
-
-                                <li className="text-base-content hover:underline"><Link to="/Search">Search <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg> </Link></li>
-
-                                <label className="ml-8 mt-4 swap swap-rotate animate-pulse animate-infinite animate-delay-[5000ms]">
-
-                                    {/* this hidden checkbox controls the state */}
-                                    <input type="checkbox" className="theme-controller" value="synthwave" />
-                                    {/* moon icon */}
-                                    <svg className="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
-                                    {/* sun icon */}
-                                    <svg className="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
-                                </label>
+                        <details>
+                            <summary>Movie</summary>
+                            <ul className="bg-gradient-to-r from-base-100 to-base-300">
+                                <li><Link to="/Movies_top">Top</Link></li>
+                                <li><Link to="/Movies_Popular">Popular</Link></li>
+                                <li><Link to="/Movies_Trending">Trending</Link></li>
+                                <li><Link to="/Discussions_M">Discussions</Link></li>
                             </ul>
                         </details>
                     </li>
+                    <li>
+                        <details>
+                            <summary>TV Shows</summary>
+                            <ul className="bg-gradient-to-r from-base-100 to-base-300">
+                                <li><Link to="/TV_top">Top</Link></li>
+                                <li><Link to="/TV_Popular">Popular</Link></li>
+                                <li><Link to="/TV_Trending">Trending</Link></li>
+                                <li><Link to="/Discussions_T">Discussions</Link></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><Link to="/Search">Search <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg></Link></li>
                 </ul>
             </div>
-
-            <label className="swap swap-rotate animate-pulse animate-infinite animate-delay-[5000ms] max-md:hidden">
-
-                {/* this hidden checkbox controls the state */}
-                <input type="checkbox" className="theme-controller" value="synthwave" />
-                {/* moon icon */}
-                <svg className="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
-                {/* sun icon */}
-                <svg className="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
-            </label>
+            <div className="navbar-end">
+                <label className="cursor-pointer grid place-items-center">
+                    <input type="checkbox" value="synthwave" className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2" />
+                    <svg className="col-start-1 row-start-1 stroke-base-100 fill-base-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" /></svg>
+                    <svg className="col-start-2 row-start-1 stroke-base-100 fill-base-100" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </label>
+            </div>
         </div>
     )
 }

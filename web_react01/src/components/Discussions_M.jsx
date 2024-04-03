@@ -10,7 +10,7 @@ function Discussions_M() {
       <title>Discussions Movie</title>
       <Nav />
 
-      <div className='ml-8 mr-8 mt-36'>
+      <div className='mx-8 mt-36'>
         <Giscus
           id="comments"
           repo="SarawutEz/ReMedia"

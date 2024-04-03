@@ -48,7 +48,7 @@ function TV_top() {
             <title>Top TV Shows</title>
             <Nav />
 
-            <p className='mt-28 mb-20 ml-16 text-4xl font-bold text-start underline decoration-solid animate-fade-right'>
+            <p className='mt-28 mb-20 text-4xl font-bold text-center underline decoration-solid animate-fade-right'>
                 Top TV Shows </p>
 
             {loading ? <div className='container mx-auto flex justify-center'><span className="loading loading-ring loading-lg"></span></div> : <div>
@@ -56,34 +56,38 @@ function TV_top() {
                 <div className='flex flex-wrap justify-center'>
                     {data.map((val) => (
                         <div className='mb-48' key={val.id}>
-                            <div className='mx-16 w-72 min-h-full skeleton '>
+                            <div className='min-h-full skeleton mx-2 sm:w-72 sm:mx-6 lg:mx-8 '>
 
-                                <div className=" z-20 dropdown dropdown-bottom animate-fade-right">
+                                <div className="z-20 dropdown dropdown-bottom animate-fade-right">
                                     <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/book.png" /></div>
-                                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-96">
-                                        <p className='text-lg mr-4'>{val.overview}</p>
+                                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-80">
+                                        <p className='text-lg z-15 mr-4'>{val.overview}</p>
                                         <details className="dropdown">
                                             <summary className="m-1 btn btn-active btn-link bg-transparent border-none animate-spin"><img src="/img/time.png" /></summary>
                                             <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                            
                                                 <p className='text-lg z-15'>{val.first_air_date}</p>
                                             </ul>
                                         </details>
                                     </ul>
                                 </div>
 
-                                <div className="absolute dropdown dropdown-end ml-36 z-10">
+
+                                <div className="absolute dropdown dropdown-center z-10">
                                     <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/add-image.png" /></div>
                                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                        <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.backdrop_path}`} />
+                                        <img className='card size-11/12 animate-fade-left' src={`https://image.tmdb.org/t/p/w500${val.backdrop_path}`} />
                                     </ul>
                                 </div>
 
-                                <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
+
+                                <img className='card size-11/12 animate-fade-left' src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
 
 
                                 <div className="stats shadow pt-1 bg-transparent">
 
                                     <div className="stat">
+                                
                                         <p className='text-xl font-semibold'>{val.name}</p>
                                         <div className="stat-title">Vote Average</div>
                                         <div className="stat-value text-lg">{val.vote_average}</div>
