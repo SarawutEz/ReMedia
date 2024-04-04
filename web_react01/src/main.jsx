@@ -4,7 +4,6 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './components/Home.jsx'
 import Movies_Popular from './components/Movies_Popular.jsx'
-import Animations from './components/Animations.jsx'
 import Search from './components/Search.jsx'
 import Movie_top from './components/Movie_top.jsx';
 import TV_Popular from './components/TV_Popular .jsx';
@@ -13,6 +12,7 @@ import TV_Trending from './components/TV_Trending.jsx';
 import Movie_Trending from './components/Movie_Trending.jsx';
 import Discussions_M from './components/Discussions_M.jsx';
 import Discussions_T from './components/Discussions_T.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -23,11 +23,6 @@ const router = createBrowserRouter([
   {
     path: "Movies_Popular",
     element: <Movies_Popular />
-  },
-
-  {
-    path: "Animations",
-    element: <Animations />
   },
 
   {
@@ -69,9 +64,6 @@ const router = createBrowserRouter([
     path: "Movies_Trending",
     element: <Movie_Trending />
   },
-
-
-
 
 ])
 

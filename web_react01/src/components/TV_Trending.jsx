@@ -64,12 +64,15 @@ function TV_Trending() {
                                     <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/book.png" /></div>
                                     <ul tabIndex={0} className=" dropdown-content p-2 shadow bg-base-100 rounded-box w-80">
                                         <p className='text-lg mr-4'>{val.overview}</p>
-                                        <details className="dropdown">
-                                            <summary className="m-1 btn btn-active btn-link bg-transparent border-none animate-spin"><img src="/img/time.png" /></summary>
-                                            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                                                <p className='text-lg z-15'>{val.first_air_date}</p>
-                                            </ul>
-                                        </details>
+                                        <samp>
+                                            <details className="dropdown">
+                                                <summary className="m-1 btn btn-active btn-link bg-transparent border-none animate-spin"><img src="/img/time.png" /></summary>
+                                                <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                                                    <p className='text-lg z-15'>{val.release_date}</p>
+                                                </ul>
+                                            </details>
+                                            <Link to={`https://www.google.com/search?q=${val.name}`}><button className="btn btn-active btn-link bg-transparent border-none"><img src="/img/analysis.png" /></button></Link>
+                                        </samp>
 
                                     </ul>
                                 </div>
