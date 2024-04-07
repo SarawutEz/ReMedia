@@ -3,11 +3,13 @@ import Nav from './nav'
 import Footer from './footer'
 import { Link } from "react-router-dom"
 import Giscus from '@giscus/react';
+import Scrolltotop from './Scrolltotop'
 
 function Discussions_T() {
   return (
     <>
       <title>Discussions TV Show</title>
+      <Scrolltotop/>
       <Nav />
 
       <div className='ml-8 mr-8 mt-36'>

@@ -10,6 +10,7 @@ import 'swiper/css';
 //components
 import Nav from './nav'
 import Footer from './footer'
+import Scrolltotop from './Scrolltotop'
 
 export default function Search() {
 
@@ -51,6 +52,7 @@ export default function Search() {
   return (
     <>
       <title>Search</title>
+      <Scrolltotop/>
       <Nav />
 
       <label className="input input-bordered flex items-center mt-28 mx-4 animate-fade-right">

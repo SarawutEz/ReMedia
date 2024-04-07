@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './nav'
 import Footer from './footer'
 import { Link } from "react-router-dom"
+import Scrolltotop from './Scrolltotop'
 
 function Home() {
 
@@ -9,6 +10,8 @@ function Home() {
     <>
       <title>ReMedia</title>
 
+      <Scrolltotop/>
+      
       {/*Navbar*/}
       <Nav />
 
@@ -43,7 +46,7 @@ function Home() {
           <p className='mt-6 text-lg'>Use multi search when you want to search for movies, TV shows and people in a single request.</p>
           <button className="btn btn-outline mt-8"><Link to="/Search">Search</Link></button>
         </div>
-        <img className='card size-6/12 skew-y-6 select-none cursor-pointer hover:skew-y-0 max-md:mt-16 max-md:w-96 max-md:container mx-auto' src="/img/Search.png" />
+        <img className='card size-6/12 skew-y-6 select-none cursor-pointer hover:skew-y-0 max-md:mt-16 max-md:w-96 max-md:container mx-auto' src="/img/S.png" />
       </div>
 
 

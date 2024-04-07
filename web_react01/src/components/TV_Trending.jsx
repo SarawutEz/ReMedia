@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom'
 //components
 import Nav from './nav'
 import Footer from './footer'
+import Scrolltotop from './Scrolltotop'
 
 function TV_Trending() {
 
@@ -48,6 +49,7 @@ function TV_Trending() {
 
         <>
             <title>Trending TV Shows</title>
+            <Scrolltotop/>
             <Nav />
 
             <p className='mt-28 mb-20 text-4xl font-bold text-center underline decoration-solid animate-fade-right'>
