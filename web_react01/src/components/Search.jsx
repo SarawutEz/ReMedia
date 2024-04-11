@@ -17,6 +17,7 @@ export default function Search() {
   const [data, setDate] = useState([])
   const [loading, setloading] = useState(false)
   const [Search, setSearch] = useState("")
+
   console.log(Search);
 
   const fetchAPI = async () => {
@@ -49,10 +50,12 @@ export default function Search() {
 
   console.log(data);
 
+
+
   return (
     <>
       <title>Search</title>
-      <Scrolltotop/>
+      <Scrolltotop />
       <Nav />
 
       <label className="input input-bordered flex items-center mt-28 mx-4 animate-fade-right">
@@ -67,30 +70,37 @@ export default function Search() {
         <div className='flex flex-wrap justify-center'>
           {data.map((val) => (
             <div className='mt-20' key={val.id}>
-              <div className='min-h-full skeleton mx-2 sm:w-72 sm:mx-6 lg:mx-8 '>
+              <div className='w-72 min-h-full skeleton mx-2 sm:w-72 sm:mx-6 lg:mx-8 '>
 
-                <div className="z-20 dropdown dropdown-bottom animate-fade-right">
-                  <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/book.png" /></div>
-                  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-80">
-                    <p className='text-lg z-15 mr-4'>{val.overview}</p>
-                    <details className="dropdown">
-                      <summary className="m-1 btn btn-active btn-link bg-transparent border-none animate-spin"><img src="/img/time.png" /></summary>
-                      <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <p className='text-lg z-15'>{val.release_date}</p>
-                        <p className='text-lg z-15'>{val.first_air_date}</p>
-                      </ul>
-                    </details>
-                  </ul>
+                <div className='absolute z-20'>
+                  <dialog id={val.id} className="modal">
+                    <div className="modal-box bg-gradient-to-r from-base-100 to-base-300 w-11/12 max-w-5xl">
+                      <h3 className="font-bold text-2xl">Overview</h3>
+                      <p className="py-4">{val.overview}</p>
+
+                      <samp className='text-lg z-15'>
+                        <p>Release Date</p>
+                        <p>{val.first_air_date}</p>
+                        <p>{val.release_date}</p>
+                        <p>Media_Type: {val.media_type}</p>
+                      </samp>
+
+                      <p className='text-lg btn mx-4 mt-4'>TV <Link to={`https://www.google.com/search?q=${val.name}`}><button className="btn btn-active btn-link bg-transparent border-none"><img src="/img/analysis.png" /></button></Link></p>
+                      <p className='text-lg btn mt-4'>Movie  <Link to={`https://www.google.com/search?q=${val.title}`}><button className="btn btn-active btn-link bg-transparent border-none"><img src="/img/analysis.png" /></button></Link></p>
+
+                      <div className="modal-action">
+                        <form method="dialog">
+                          {/* if there is a button, it will close the modal */}
+                          <button className="btn">Close</button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
                 </div>
 
-                <div className="absolute dropdown dropdown-center z-10">
-                  <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/add-image.png" /></div>
-                  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <img className='card size-11/12 animate-fade-left' src={`https://image.tmdb.org/t/p/w500${val.backdrop_path}`} />
-                  </ul>
-                </div>
+                {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                <img className='size-full animate-fade-left mt-1 rounded-2xl cursor-pointer' onClick={() => document.getElementById(`${val.id}`).showModal()} src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
 
-                <img className='card size-11/12 animate-fade-left' src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
 
 
                 <div className="stats shadow pt-1 bg-transparent">

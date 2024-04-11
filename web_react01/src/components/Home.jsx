@@ -13,7 +13,7 @@ function Home() {
       <Scrolltotop/>
       
       {/*Navbar*/}
-      <Nav />
+      <Nav/>
 
       {/*animation by TAILWIND CSS ANIMATED*/}
 
@@ -48,7 +48,7 @@ function Home() {
         </div>
         <img className='card size-6/12 skew-y-6 select-none cursor-pointer hover:skew-y-0 max-md:mt-16 max-md:w-96 max-md:container mx-auto' src="/img/S.png" />
       </div>
-      
+
       {/*Footer*/}
       <Footer />
     </>

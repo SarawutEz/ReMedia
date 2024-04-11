@@ -47,7 +47,7 @@ export default function Movies_Popular() {
   return (
     <>
       <title>Popular Movies</title>
-      <Scrolltotop/>
+      <Scrolltotop />
       <Nav />
 
       <p className='mt-28 mb-20 text-4xl font-bold text-center underline decoration-solid animate-fade-right'>
@@ -58,32 +58,32 @@ export default function Movies_Popular() {
         <div className='flex flex-wrap justify-center'>
           {data.map((val) => (
             <div className='mb-48' key={val.id}>
-              <div className='min-h-full skeleton mx-2 sm:w-72 sm:mx-6 lg:mx-8 '>
+              <div className='w-72 min-h-full skeleton mx-2 sm:w-72 sm:mx-6 lg:mx-8 '>
 
-                <div className="z-20 dropdown dropdown-bottom animate-fade-right">
-                  <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/book.png" /></div>
-                  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-80">
-                    <p className='text-lg z-15 mr-4'>{val.overview}</p>
-                    <samp>
-                      <details className="dropdown">
-                        <summary className="m-1 btn btn-active btn-link bg-transparent border-none animate-spin"><img src="/img/time.png" /></summary>
-                        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                          <p className='text-lg z-15'>{val.release_date}</p>
-                        </ul>
-                      </details>
+                <div className='absolute z-20'>
+                  <dialog id={val.id} className="modal">
+                    <div className="modal-box bg-gradient-to-r from-base-100 to-base-300 w-11/12 max-w-5xl">
+                      <h3 className="font-bold text-2xl">Overview</h3>
+                      <p className="py-4">{val.overview}</p>
+
+                      <samp>
+                        <p className='text-lg z-15'>Release Date: {val.release_date}</p>
+                      </samp>
+
                       <Link to={`https://www.google.com/search?q=${val.title}`}><button className="btn btn-active btn-link bg-transparent border-none"><img src="/img/analysis.png" /></button></Link>
-                    </samp>
-                  </ul>
+
+                      <div className="modal-action">
+                        <form method="dialog">
+                          {/* if there is a button, it will close the modal */}
+                          <button className="btn">Close</button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
                 </div>
 
-                <div className="absolute dropdown dropdown-center z-10">
-                  <div tabIndex={0} role="button" className="btn m-1 opacity-50 hover:opacity-100"><img src="/img/add-image.png" /></div>
-                  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.backdrop_path}`} />
-                  </ul>
-                </div>
-
-                <img className='card size-11/12 animate-fade-left hover:scale-110' src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
+                {/* You can open the modal using document.getElementById('ID').showModal() method */}
+                <img className='size-full animate-fade-left mt-1 rounded-2xl cursor-pointer' onClick={() => document.getElementById(`${val.id}`).showModal()} src={`https://image.tmdb.org/t/p/w500${val.poster_path}`} />
 
 
                 <div className="stats shadow pt-1 bg-transparent">
