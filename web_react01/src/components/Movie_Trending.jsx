@@ -65,14 +65,19 @@ function Movie_Trending() {
                                 <div className='absolute z-20'>
                                     <dialog id={val.id} className="modal">
                                         <div className="modal-box bg-gradient-to-r from-base-100 to-base-300 w-11/12 max-w-5xl">
-                                            <h3 className="font-bold text-2xl">Overview</h3>
-                                            <p className="py-4">{val.overview}</p>
 
-                                            <samp>
-                                                <p className='text-lg z-15'>Release Date: {val.release_date}</p>
-                                            </samp>
-
-                                            <Link to={`https://www.google.com/search?q=${val.title}`}><button className="btn btn-active btn-link bg-transparent border-none"><img src="/img/analysis.png" /></button></Link>
+                                            <div className="hero min-h-full rounded-xl" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${val.backdrop_path})` }}>
+                                                <div className="hero-overlay bg-black opacity-60 rounded-xl"></div>
+                                                <div className="hero-content text-neutral-content">
+                                                    <div>
+                                                        <h1 className="mb-5 text-3xl font-medium">Overview</h1>
+                                                        <p className="mb-4 ">{val.overview}</p>
+                                                        <p className='mb-2 font-semibold'>Release Date: {val.release_date}</p>
+                                                        <p className="mb-5 text-lg font-semibold">Vote Average: {val.vote_average}</p>
+                                                        <Link to={`https://www.google.com/search?q=${val.title}`}><button className="btn"><img src="/img/analysis.png" /></button></Link>
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                             <div className="modal-action">
                                                 <form method="dialog">

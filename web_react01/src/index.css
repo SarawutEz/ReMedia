@@ -17,3 +17,7 @@
     cursor: ns-resize;
 }
 
+backgroundImage{
+    filter: blur(12px);
+}
+

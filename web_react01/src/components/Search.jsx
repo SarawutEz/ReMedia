@@ -75,18 +75,25 @@ export default function Search() {
                 <div className='absolute z-20'>
                   <dialog id={val.id} className="modal">
                     <div className="modal-box bg-gradient-to-r from-base-100 to-base-300 w-11/12 max-w-5xl">
-                      <h3 className="font-bold text-2xl">Overview</h3>
-                      <p className="py-4">{val.overview}</p>
 
-                      <samp className='text-lg z-15'>
-                        <p>Release Date</p>
-                        <p>{val.first_air_date}</p>
-                        <p>{val.release_date}</p>
-                        <p>Media_Type: {val.media_type}</p>
-                      </samp>
+                      <div className="hero min-h-full rounded-xl" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${val.backdrop_path})` }}>
+                        <div className="hero-overlay bg-black opacity-60 rounded-xl"></div>
+                        <div className="hero-content text-neutral-content">
+                          <div>
 
-                      <p className='text-lg btn mx-4 mt-4'>TV <Link to={`https://www.google.com/search?q=${val.name}`}><button className="btn btn-active btn-link bg-transparent border-none"><img src="/img/analysis.png" /></button></Link></p>
-                      <p className='text-lg btn mt-4'>Movie  <Link to={`https://www.google.com/search?q=${val.title}`}><button className="btn btn-active btn-link bg-transparent border-none"><img src="/img/analysis.png" /></button></Link></p>
+                            <h1 className="mb-5 text-3xl font-medium">Overview</h1>
+                            <p className="mb-4">{val.overview}</p>
+                            <p className='text-xl'>Release Date</p>
+                            <p className='mb-2 font-semibold'>{val.first_air_date}</p>
+                            <p className='mb-4 font-semibold'>{val.release_date}</p>
+                            <p className="mb-4 text-lg font-semibold">Vote Average: {val.vote_average}</p>
+                            <p className="mb-4 text-lg">Media Type: {val.media_type}</p>
+
+                            <Link to={`https://www.google.com/search?q=${val.title}`}><button className="btn mr-5">Movie<img src="/img/analysis.png" /></button></Link>
+                            <Link to={`https://www.google.com/search?q=${val.name}`}><button className="btn">TV<img src="/img/analysis.png" /></button></Link>
+                          </div>
+                        </div>
+                      </div>
 
                       <div className="modal-action">
                         <form method="dialog">

@@ -15,7 +15,7 @@ export default function Nav() {
         <>
             <div className="navbar bg-gradient-to-r from-base-100 to-base-300 z-50 fixed top-0">
 
-                <motion.div className="fixed top-16 left-0 right-0 h-1 bg-base-content rounded-r-3xl rounded-l-3xl" style={{ scaleX }} />
+                <motion.div className="fixed top-16 left-0 right-0 h-1 bg-base-content rounded-r-3xl" style={{ scaleX }} />
 
                 <div className="navbar-start">
 

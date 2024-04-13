@@ -3,12 +3,12 @@ import Nav from './nav'
 import Footer from './footer'
 import { Link } from "react-router-dom"
 import Scrolltotop from './Scrolltotop'
+import { motion, useScroll, useSpring } from "framer-motion";
 
 
 function Home() {
 
-  
-
+ 
   return (
     <>
       <title>ReMedia</title>
@@ -17,10 +17,8 @@ function Home() {
       
       {/*Navbar*/}
       <Nav/>
-
+      
       {/*animation by TAILWIND CSS ANIMATED*/}
-
-
       {/*Content 1*/}
       <div className='flex w-11/12 mx-auto mt-36 animate-fade-right animate-ease-in-out max-md:flex-col'>
         <div className='mr-12 max-md:mr-0'>
