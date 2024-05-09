@@ -3,9 +3,6 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { Link } from "react-router-dom"
 import { useParams } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-
 
 //components
 import Nav from './nav'
@@ -58,16 +55,22 @@ export default function Search() {
       <Scrolltotop />
       <Nav />
 
-      <label className="input input-bordered flex items-center mt-28 mx-4 animate-fade-right">
+      <div className='flex justify-center '>
+        <kbd className="kbd kbd-lg btn mt-24 mb-8 text-2xl font-bold">Search</kbd>
+      </div>
 
-        <input type="text" className="grow text-lg" placeholder="Search" value={Search} onChange={(e) => setSearch(e.target.value)} />
+      <div className='flex justify-center'>
+        <label className="input input-bordered flex items-center w-8/12 mx-4 animate-fade-right">
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-8 h-8 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
-      </label>
+          <input type="text" className="grow text-lg" placeholder="Search" value={Search} onChange={(e) => setSearch(e.target.value)} />
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-8 h-8 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
+        </label>
+      </div>
 
       {loading ? <div className='container mx-auto flex justify-center mt-32'><span className="loading loading-ring loading-lg"></span></div> : <div>
 
-        <div className='flex flex-wrap justify-center'>
+        <div className='flex flex-wrap justify-center '>
           {data.map((val) => (
             <div className='mt-20' key={val.id}>
               <div className='w-72 min-h-full skeleton mx-2 sm:w-72 sm:mx-6 lg:mx-8 '>
@@ -76,7 +79,7 @@ export default function Search() {
                   <dialog id={val.id} className="modal">
                     <div className="modal-box bg-gradient-to-r from-base-100 to-base-300 w-11/12 max-w-5xl">
 
-                      <div className="hero min-h-full rounded-xl" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${val.backdrop_path})` }}>
+                      <div className="hero min-h-full rounded-xl bg-cover sm:bg-contain" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${val.backdrop_path})` }}>
                         <div className="hero-overlay bg-black opacity-60 rounded-xl"></div>
                         <div className="hero-content text-neutral-content">
                           <div>
@@ -126,8 +129,9 @@ export default function Search() {
         </div>
       </div>}
 
+      <div className='mb-16'></div>
 
-      <Footer />
+
     </>
   )
 }

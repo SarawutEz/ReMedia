@@ -52,8 +52,9 @@ function TV_Trending() {
             <Scrolltotop />
             <Nav />
 
-            <p className='mt-28 mb-20 text-4xl font-bold text-center underline decoration-solid animate-fade-right'>
-                Trending TV Shows  </p>
+            <div className='flex justify-center '>
+                <kbd className="kbd kbd-lg btn mt-28 mb-20 text-2xl font-bold">Trending TV Shows</kbd>
+            </div>
 
             {loading ? <div className='container mx-auto flex justify-center'><span className="loading loading-ring loading-lg"></span></div> : <div>
 
@@ -66,7 +67,7 @@ function TV_Trending() {
                                     <dialog id={val.id} className="modal">
                                         <div className="modal-box bg-gradient-to-r from-base-100 to-base-300 w-11/12 max-w-5xl">
 
-                                            <div className="hero min-h-full rounded-xl" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${val.backdrop_path})` }}>
+                                            <div className="hero min-h-full rounded-xl bg-cover sm:bg-contain" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${val.backdrop_path})` }}>
                                                 <div className="hero-overlay bg-black opacity-60 rounded-xl"></div>
                                                 <div className="hero-content text-neutral-content">
                                                     <div>

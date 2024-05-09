@@ -19,8 +19,6 @@ export default function Nav() {
 
                 <div className="navbar-start">
 
-
-
                     <div className="dropdown ">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -50,12 +48,13 @@ export default function Nav() {
                     </div>
                     <Link to="/" className="btn btn-ghost text-xl">ReMedia</Link>
                 </div>
+
                 <div className="navbar-center hidden lg:flex ">
-                    <ul className="menu menu-horizontal px-1 ">
-                        <li><Link to="/">Home</Link></li>
+                    <ul className="menu menu-horizontal px-1">
+                        <li className="mx-2"><Link to="/">Home</Link></li>
                         <li>
                             <details>
-                                <summary>Movie</summary>
+                                <summary className="mx-2">Movie</summary>
                                 <ul className="bg-gradient-to-r from-base-100 to-base-300">
                                     <li><Link to="/Movies_top">Top</Link></li>
                                     <li><Link to="/Movies_Popular">Popular</Link></li>
@@ -66,7 +65,7 @@ export default function Nav() {
                         </li>
                         <li>
                             <details>
-                                <summary>TV Shows</summary>
+                                <summary className="mx-2">TV Shows</summary>
                                 <ul className="bg-gradient-to-r from-base-100 to-base-300">
                                     <li><Link to="/TV_top">Top</Link></li>
                                     <li><Link to="/TV_Popular">Popular</Link></li>
@@ -75,7 +74,7 @@ export default function Nav() {
                                 </ul>
                             </details>
                         </li>
-                        <li><Link to="/Search">Search <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg></Link></li>
+                        <li className="mx-2"><Link to="/Search">Search <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-100"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg></Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
